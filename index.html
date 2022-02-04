@@ -4,29 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src='https://d3js.org/d3.v4.min.js'></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <script>
-    $(function () {
+    $(document).ready(function() {
         $('[data-toggle="popover"]').popover()
+        $(".alert").hide();
+        checkWeekend();
+        get_bs_kb_dep();
     })
-    </script>
+    var event = new Date();
+    var day = event.getDay();
+    var hour = event.getHours();
+    var minutes = event.getMinutes();
+    var curTime = hour*100+ minutes;
+    const bs_kb_dep = [818, 838, 908, 933, 953, 1013, 1033, 1053, 1113, 1133, 1153, 1213, 1233, 1253, 1313, 1333, 1353, 1413, 1433, 1453, 1513, 1533, 1553, 1623, 1653, 1723, 1753];
+
+    function checkWeekend() {
+        var alert = document.getElementById('Weekend_alert');
+        if (day == 0 || day == 6){
+            $(".alert").show();
+            $(".alert div").text("No shuttle bus on weekend! During the evenings in semester time students and staff can travel for £1 on Service 41.");
+        }
+        if (day == 5){
+            $(".alert div").text("Happy Friday! Hope you had a nice week!");
+            $(".alert").show();
+        }
+    }
+    function time_format(t){
+        var hour = ((Math.floor(t/100)<10) ? '0'+ Math.floor(t/100) : Math.floor(t/100))
+        var min = (((t%100)<10) ? '0'+(t%100) : (t%100))
+        return hour+':'+min
+    }
+    function get_bs_kb_dep(){
+        var pos = d3.bisect(bs_kb_dep,curTime);
+        // document.getElementById('time-test').innerHTML = pos;
+
+        var next_deps = [818, 838, 908, 933, 953, 1013, 1033, 1053, 1113, 1133, 1153, 1213, 1233, 1253, 1313, 1333, 1353, 1413, 1433, 1453, 1513, 1533, 1553, 1623, 1653, 1723, 1753].slice(pos,pos+3).map(function (t, i) {
+        return time_format(t) 
+    })
+        document.getElementById('iternary').innerHTML = '<li>' + next_deps.join('</li><li>') + '</li>'
+    };
+    
+</script>
+    
 <style>
+    alert {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    .timeboard{
+        margin: 30px;
+    }
     footer{
         margin: 30px;
     }
-    body{
-        margin: 30px;
-    }
-    
 </style>
+    
+<div class="alert alert-warning alert-dismissible fade show text-center" id="Weekend_alert" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    <div></div>
+</div>
+
+
 <body class="text-center">
     <h1 class="text-center">Shuttle Bus Timeboard</h1>
+        <div class="direction" role="group" aria-label="Basic example">
+            Bristo Square &rarr; Kings Building 
+            <!-- <button type="button" class="btn btn-dark text-center" style = "display: block;">&#8645;</button> -->
+        </div>
+    <section class="timeboard">
+        <ul class="text-center" id="iternary"></ul>
+    </section>
     <a class="btn btn-primary btn-lg" href="https://www.ed.ac.uk/transport/public-transport/buses/shuttle-bus">See full schedule</a>
+
+    
 </body>
+
+
+
 <footer class="text-center">
     <a href="https://www.ed.ac.uk/transport/public-transport/buses/shuttle-bus">Further info</a><br>
     <a tabindex="0" class="btn btn-link" data-toggle="popover" data-trigger="focus" title="Hi I am Guifu :)" data-content="I am an Informatics student at University of Edinburgh. This app is made for my friend. He constantly asks me when the next shuttle bus is coming.">Credit</a>
