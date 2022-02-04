@@ -23,7 +23,7 @@
     var minutes = event.getMinutes();
     var curTime = hour*100+ minutes;
     const bs_kb_dep = [818, 838, 908, 933, 953, 1013, 1033, 1053, 1113, 1133, 1153, 1213, 1233, 1253, 1313, 1333, 1353, 1413, 1433, 1453, 1513, 1533, 1553, 1623, 1653, 1723, 1753];
-
+    const bs_kb_arr = [832, 852, 922, 947, 1007, 1027, 1047, 1107, 1127, 1147, 1207, 1227, 1247, 1307, 1327, 1347, 1407, 1427, 1447, 1507, 1527, 1547, 1611, 1641, 1711, 1741, 1811];
     function checkWeekend() {
         var alert = document.getElementById('Weekend_alert');
         if (day == 0 || day == 6){
@@ -31,7 +31,7 @@
             $(".alert div").text("No shuttle bus on weekend! During the evenings in semester time students and staff can travel for £1 on Service 41.");
         }
         if (day == 5){
-            $(".alert div").text("Happy Friday! Hope you had a nice week!");
+            $(".alert div").text("Happy Friday! Hope you had a nice week! :)");
             $(".alert").show();
         }
     }
@@ -44,8 +44,8 @@
         var pos = d3.bisect(bs_kb_dep,curTime);
         // document.getElementById('time-test').innerHTML = pos;
 
-        var next_deps = [818, 838, 908, 933, 953, 1013, 1033, 1053, 1113, 1133, 1153, 1213, 1233, 1253, 1313, 1333, 1353, 1413, 1433, 1453, 1513, 1533, 1553, 1623, 1653, 1723, 1753].slice(pos,pos+3).map(function (t, i) {
-        return time_format(t) 
+        var next_deps = [818, 838, 908, 933, 953, 1013, 1033, 1053, 1113, 1133, 1153, 1213, 1233, 1253, 1313, 1333, 1353, 1413, 1433, 1453, 1513, 1533, 1553, 1623, 1653, 1723, 1753].slice(pos,Math.min(pos+5, bs_kb_dep.length)).map(function (t,i) {
+        return time_format(t) + ' - ' + time_format(bs_kb_arr[pos+i])
     })
         document.getElementById('iternary').innerHTML = '<li>' + next_deps.join('</li><li>') + '</li>'
     };
@@ -60,16 +60,27 @@
         text-align: center;
     }
     ul {
+        
+        
         list-style-type: none;
         margin: 0;
         padding: 0;
         text-align: center;
     }
     .timeboard{
-        margin: 30px;
+        padding-top: 4em;
+        padding-bottom: 4em;
+        
+        /* margin: auto auto auto auto ; */
+       
+        /* width: 800px; */
     }
     footer{
         margin: 30px;
+    }
+    li {
+        padding-bottom: 40px;
+        border-top: 0.5px solid #f5f5f5;
     }
 </style>
     
