@@ -40,14 +40,24 @@
         var min = (((t%100)<10) ? '0'+(t%100) : (t%100))
         return hour+':'+min
     }
+    function get_time_difference(t0, t1){
+        if (t0/100 == t1/100) var diff = Math.abs(t1-t0)
+        else{
+            t0_min = 1
+        }
+        return diff
+
+    }
     function get_bs_kb_dep(){
         var pos = d3.bisect(bs_kb_dep,curTime);
         // document.getElementById('time-test').innerHTML = pos;
 
-        var next_deps = [818, 838, 908, 933, 953, 1013, 1033, 1053, 1113, 1133, 1153, 1213, 1233, 1253, 1313, 1333, 1353, 1413, 1433, 1453, 1513, 1533, 1553, 1623, 1653, 1723, 1753].slice(pos,Math.min(pos+5, bs_kb_dep.length)).map(function (t,i) {
+        var next_deps = [818, 838, 908, 933, 953, 1013, 1033, 1053, 1113, 1133, 1153, 1213, 1233, 1253, 1313, 1333, 1353, 1413, 1433, 1453, 1513, 1533, 1553, 1623, 1653, 1723, 1753].slice(pos,Math.min(pos+3, bs_kb_dep.length)).map(function (t,i) {
         return time_format(t) + ' - ' + time_format(bs_kb_arr[pos+i])
+
     })
         document.getElementById('iternary').innerHTML = '<li>' + next_deps.join('</li><li>') + '</li>'
+        if (next_deps == 0) document.getElementById('iternary').innerHTML = 'Sorry there is no shuttle for today.'
     };
     
 </script>
