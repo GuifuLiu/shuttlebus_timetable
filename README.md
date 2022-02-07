@@ -14,6 +14,7 @@ The user's current time, day, and date are accessed using Javascript [standard b
 ## Built With
 - Javascript
 - Bootstrap
+- Github Pages
 
 ## Inspiration
 The web application is inspired by a friend who constantly asks me when the next shuttle bus is coming.
