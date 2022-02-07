@@ -1,6 +1,6 @@
 # Shuttle Bus Timetable for Central Area to King's Buildings
 
-[Try it here][1]
+[See Timetable][1]
 
 ## Description
 A timetable for Central Area to the King's Buildings Shuttle Bus provided by University of Edinburgh.
