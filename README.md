@@ -7,7 +7,8 @@ A timetable for Central Area to the King's Buildings Shuttle Bus provided by Uni
 This live timetable provides three most recent shuttle buses that depart at or after the current time.
 
 ## Data
-The schedule is provided by the [University][2].
+The shuttle bus schedule is provided by the [University][2].
+The user's current time, day, and date are accessed using Javascript [standard built-in object][3]. 
 
 
 ## Built With
@@ -19,3 +20,4 @@ The web application is inspired by a friend who constantly asks me when the next
 
 [1]: https://guifuliu.github.io/shuttlebus_timetable/
 [2]: https://www.ed.ac.uk/transport/public-transport/buses/shuttle-bus
+[3]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setDate
