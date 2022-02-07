@@ -1,4 +1,4 @@
-# Shuttle Bus Timetable for Central Area to King's Buildings
+# Live Shuttle Bus Timetable for Central Area to King's Buildings
 
 [See Timetable][1]
 
