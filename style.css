@@ -13,8 +13,8 @@ ul {
     text-align: center;
 }
 .timeboard{
-    padding-top: 4em;
-    padding-bottom: 4em;
+    padding-top: 3em;
+    padding-bottom: 2em;
     
     /* margin: auto auto auto auto ; */
    
@@ -22,6 +22,10 @@ ul {
 }
 footer{
     margin: 30px;
+    text-align: center;
+}
+.block{
+    display: inline-block;
 }
 li {
     padding-bottom: 40px;
@@ -32,7 +36,7 @@ li {
 }
 header{
     font-family: 'Varela Round', sans-serif;
-    margin-top: 1.5em;
+    margin-top: 1em;
 }
 /* * {
     font-family: 'Varela Round', sans-serif;

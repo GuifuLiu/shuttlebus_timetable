@@ -24,7 +24,7 @@ function kb_bs() {
     $(".alert div").text("Dropoff available on Chapel Street for this iternary");
     get_dep(kb_bs_dep, kb_bs_arr)
     $('#direction').html ("Kings Building &rarr; Bristo Square ");
-
+    document.getElementById("map").setAttribute('href', "https://goo.gl/maps/tpNG53paWmC75cEF9");
 }
 function bs_kb() {
     clearInterval(myInterval);
@@ -32,7 +32,7 @@ function bs_kb() {
     $(".alert").hide();
     get_dep(bs_kb_dep, bs_kb_arr)
     $('#direction').html ("Bristo Square &rarr; Kings Building ");
-    
+    document.getElementById("map").setAttribute('href', "https://goo.gl/maps/7eVyR5WT3b8Uz7ET9");
 }
 function toggleFunction() {
     toggle ? kb_bs(): bs_kb();
