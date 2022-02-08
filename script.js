@@ -29,6 +29,7 @@ function kb_bs() {
 function bs_kb() {
     clearInterval(myInterval);
     myInterval = setInterval(function() {get_dep(bs_kb_dep, bs_kb_arr)}, 2000);
+    $(".alert").hide();
     get_dep(bs_kb_dep, bs_kb_arr)
     $('#direction').html ("Bristo Square &rarr; Kings Building ");
     
