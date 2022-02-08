@@ -3,7 +3,7 @@
 [Shown here][1]
 
 ## Description
-A timetable for Central Area to the King's Buildings Shuttle Bus provided by University of Edinburgh.
+A real-time timetable for Central Area to the King's Buildings Shuttle Bus provided by University of Edinburgh.
 This live timetable provides three most recent shuttle buses that depart at or after the current time.
 
 ## Data
