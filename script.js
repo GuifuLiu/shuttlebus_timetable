@@ -24,7 +24,7 @@ function kb_bs() {
     $(".alert div").text("Dropoff available on Chapel Street for this iternary");
     get_dep(kb_bs_dep, kb_bs_arr)
     $('#direction').html ("Kings Building &rarr; Bristo Square ");
-    document.getElementById("map").setAttribute('href', "https://goo.gl/maps/tpNG53paWmC75cEF9");
+    document.getElementById("map").setAttribute('href', "https://goo.gl/maps/2DGFRPHg9iqhgs2z6");
 }
 function bs_kb() {
     clearInterval(myInterval);
