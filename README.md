@@ -20,9 +20,9 @@ The user's current time, day, and date are accessed using Javascript [standard b
 The web application is inspired by a friend who constantly asks me when the next shuttle bus is coming.
 The following are the original design.
 
-<img width="769" alt="Screen Shot 2022-02-07 at 12 46 17 AM" src="https://user-images.githubusercontent.com/65585519/152709123-7dd9ff5f-4be9-4966-8871-bf8ce9c10ad2.png">
-<img width="694" alt="Screen Shot 2022-02-07 at 12 46 31 AM" src="https://user-images.githubusercontent.com/65585519/152709128-03fb4257-78dd-42a2-b0e9-e0a3af029f97.png">
-<img width="365" alt="Screen Shot 2022-02-07 at 12 46 40 AM" src="https://user-images.githubusercontent.com/65585519/152709132-2682a5db-5520-42af-aa8a-403ca4988d8e.png">
+<img width="769" alt="Screen Shot 2022-02-07 at 12 46 17 AM" src="https://user-images.githubusercontent.com/65585519/152709123-7dd9ff5f-4be9-4966-8871-bf8ce9c10ad2.png" width="200">
+<img width="694" alt="Screen Shot 2022-02-07 at 12 46 31 AM" src="https://user-images.githubusercontent.com/65585519/152709128-03fb4257-78dd-42a2-b0e9-e0a3af029f97.png" width="200">
+<img width="365" alt="Screen Shot 2022-02-07 at 12 46 40 AM" src="https://user-images.githubusercontent.com/65585519/152709132-2682a5db-5520-42af-aa8a-403ca4988d8e.png" width="200">
 
 
 [1]: https://guifuliu.github.io/shuttlebus_timetable/
