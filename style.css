@@ -30,9 +30,9 @@ li {
 .direction{
     margin-top: 3em;
 }
-h1{
+header{
     font-family: 'Varela Round', sans-serif;
-    margin-top: 2em;
+    margin-top: 1.5em;
 }
 /* * {
     font-family: 'Varela Round', sans-serif;

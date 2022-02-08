@@ -28,18 +28,20 @@
       </button>
     <div></div>
 </div>
-
+<header class="text-center">
+    <img src="uni_logo.jpeg" style="width: 20em;">
+    <h1 class="text-center">Live Shuttle Bus Timeboard</h1>
+    <h5>Central Area to the King's Buildings</h5>
+</header>
 
 <body class="text-center">
     
-    <h1 class="text-center">Live Shuttle Bus Timeboard</h1>
-    <h5>Central Area to the King's Buildings</h5>
     <div class="direction" role="group" aria-label="Basic example">
         
         <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary">Bristo Square &rarr; Kings Building </button>
-            <button type="button" class="btn btn-secondary">&#8645;</button>
-          </div>
+            <button id="direction" type="button" class="btn btn-secondary">Bristo Square &rarr; Kings Building </button>
+            <button id="switch" type="button" class="btn btn-secondary active" aria-pressed="true" onclick="toggleFunction()">&#8645;</button>
+        </div>
 
     </div>
     <section class="timeboard">
@@ -54,6 +56,7 @@
 
 <footer class="text-center">
     <a href="https://www.ed.ac.uk/transport/public-transport/buses/shuttle-bus">Further info</a><br>
-    <a tabindex="0" class="btn btn-link" data-toggle="popover" data-trigger="focus" title="Hi I am Guifu :)" data-content="I am an Informatics student at University of Edinburgh. This app is made for my friend. He constantly asks me when the next shuttle bus is coming.">Credit</a>
+    <a tabindex="0" class="btn btn-link" data-toggle="popover" data-trigger="focus" title="Hi I am Guifu :)" data-content="I am an Informatics student at University of Edinburgh. This app is made for my friend. He constantly asks me when the next shuttle bus is coming.">Credit</a> <br>
+    
 </footer>
 </html>
