@@ -11,10 +11,10 @@ The shuttle bus schedule is provided by the [University][2].
 The user's current time, day, and date are accessed using Javascript [standard built-in object][3]. 
 
 ## Feature
-The page should update time difference with the departure time without refreshing the page
-Find bus stop button jumps to that location on Google map
-Reminder on additional dropoff bus stop if traveling from King's Building to Bristo Square
-Reminder that there is no shuttle bus on the weekend
+- The page should update time difference with the departure time without refreshing the page
+- Find bus stop button jumps to the location on Google map
+- Reminder on additional dropoff bus stop if traveling from King's Building to Bristo Square
+- Reminder that there is no shuttle bus on the weekend
 
 ## Built With
 - Javascript
