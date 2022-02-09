@@ -21,7 +21,7 @@ function kb_bs() {
     clearInterval(myInterval);
     myInterval = setInterval(function() {get_dep(kb_bs_dep, kb_bs_arr)}, 2000)
     $(".alert").show();
-    $(".alert div").text("Dropoff available on Chapel Street for this iterniary");
+    $(".alert div").text("Dropoff available on Chapel Street for this itinerary");
     get_dep(kb_bs_dep, kb_bs_arr)
     $('#direction').html ("Kings Building &rarr; Bristo Square ");
     document.getElementById("map").setAttribute('href', "https://goo.gl/maps/2DGFRPHg9iqhgs2z6");
